@@ -1,6 +1,6 @@
 # BBB_dpram 작업환경 세팅
 - BBB OS setting : beagleboard.org 에서 'AM3358 Debian 10.3 2020-04-06 4GB SD IoT' 을 다운로드 및 SD card 에 write
-   > 커널 버전은 4.19.94
+   - 커널 버전은 4.19.94
 
 *** 이후 모든 작업은 BBB 상에서 진행
 
