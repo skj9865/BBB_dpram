@@ -35,7 +35,7 @@
     - chmod +x dtc.sh
     - ./dtc.sh
 
-- github 에서 모든 폴더 (dpram_src, driver, dtc_build)를 BBB 로 다운로드 또는 copy (scp 사용)
+- github 에서 모든 폴더 (dpram_src, driver, dtc_build)를 BBB 로 다운로드(github) 또는 copy (scp 사용)
     - dtc_build 폴더로 이동하여 build.sh 수행
     - driver 폴더로 이동하여 make 수행
     - dpram_src 하위 각 폴더로 이동하여 make 수행
