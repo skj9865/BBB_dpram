@@ -22,7 +22,7 @@
     ```
     
     - 헤더 include 오류 해결을 위해 '/usr/xenomai/include/trank/rtdm/rtdm.h' 에 있는 #include_next 내용을 아래와 같이 수정
-    - #include_next "/usr/xenoma/include/rtdm/rtdm.h"
+    - #include_next "/usr/xenomai/include/rtdm/rtdm.h"
 
 - 커널 빌드 환경을 갖추기 위해 header 파일 설치
     - apt-cache search linux-headers-$(uname -r)
