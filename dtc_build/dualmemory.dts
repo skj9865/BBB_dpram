@@ -64,10 +64,14 @@
 
 
 		/* the hardware IP uses */
-		"gpio0_15",
-		"gpio3_21",
-		"gpio0_14",
-		"gpio3_19",
+		//"gpio0_15",
+		//"gpio3_21",
+		//"gpio0_14",
+		//"gpio3_19",
+        "gpio0_5",   // by skj
+        "gpio0_4",   // by skj
+        "gpio0_12",  // by skj
+        "gpio0_13",  // by skj
 		"gpio3_17",
 		"gpio3_15",
 		"gpio3_16",
@@ -138,25 +142,25 @@
                 compatible = "gpio-leds";
                 test-led1 {
                     label = "test-led1";
-                    gpios = <&gpio0 15 0>;
+                    gpios = <&gpio0 5 0>;// by skj
                     linux,default-trigger = "default-on";
                     default-state = "on";
                 };
                 test-led2 {
                     label = "test-led2";
-                    gpios = <&gpio3 21 0>;
+                    gpios = <&gpio0 4 0>;// by skj
                     linux,default-trigger = "default-on";
                     default-state = "on";
                 };
                 test-led3 {
                     label = "test-led3";
-                    gpios = <&gpio0 14 0>;
+                    gpios = <&gpio0 12 0>;// by skj
                     linux,default-trigger = "default-on";
                     default-state = "on";
                 };
                 test-led4 {
                     label = "test-led4";
-                    gpios = <&gpio3 19 0>;
+                    gpios = <&gpio0 13 0>;  // by skj
                     linux,default-trigger = "default-on";
                     default-state = "on";
                 };

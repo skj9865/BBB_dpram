@@ -153,11 +153,14 @@ static int    write_count = 0;     // 디버깅용 write 횟수 체크 변수
 
 
 // For GPIO 
-static unsigned int       dpram_gpio_pin_size = 8;                                                          // 디버깅용 LED GPIO pin size
+//static unsigned int       dpram_gpio_pin_size = 8;   // 디버깅용 LED GPIO pin size
+static unsigned int       dpram_gpio_pin_size = 6;      // 디버깅용 LED GPIO pin size by skj
 //static unsigned int       dpram_gpio_pin_numbers[] = {4, 5, 13, 12, 113, 112, 111, 110};                // 디버깅용 LED GPIO pin number (original)
-static unsigned int       dpram_gpio_pin_numbers[] = {5, 4, 14, 115, 113, 112, 111, 110};                // 디버깅용 LED GPIO pin number // by skj
+//static unsigned int       dpram_gpio_pin_numbers[] = {5, 4, 14, 115, 113, 112, 111, 110};                // 디버깅용 LED GPIO pin number // by skj
+static unsigned int       dpram_gpio_pin_numbers[] = {5, 4, 113, 112, 111, 110};                // 디버깅용 LED GPIO pin number // by skj
 
-static bool               dpram_gpio_turn_on[] = {false, false, false, false, false, false, false, false};  // 디버깅용 LED values
+//static bool               dpram_gpio_turn_on[] = {false, false, false, false, false, false, false, false};  // 디버깅용 LED values
+static bool               dpram_gpio_turn_on[] = {false, false, false, false, false, false};  // 디버깅용 LED values by skj
 
 static unsigned int       dpram_gpio_sem_pin_number = 31;    // DPRAM의 semaphore 저장공간 접근을 위한 gpio 핀 번호
 static unsigned int       dpram_gpio_cen_pin_number = 48;    // DPRAM의 chip enable을 위한 gpio 핀 번호
@@ -192,6 +195,19 @@ void unlock(const unsigned int offset){
 // 디버깅용 LED를 통한 8bits visuallization 함수
 static void gpio_display(unsigned char val){
     int i = 0;
+    
+    /*
+    for(i =0; i<dpram_gpio_pin_size; i++){
+        gpio_set_value(dpram_gpio_pin_numbers[i],0);
+        rtdm_task_sleep(1000*1000*50);            // 50ms sleep
+    }
+    rtdm_task_sleep(1000*1000*500);            // 500ms sleep
+    
+    for(i =0; i<dpram_gpio_pin_size; i++){
+        gpio_set_value(dpram_gpio_pin_numbers[i],1);    
+        rtdm_task_sleep(1000*1000*50);            // 50ms sleep    
+    }
+    */
     for(i = 0; i < dpram_gpio_pin_size; ++i){
         dpram_gpio_turn_on[i] = (((val>>i)&0x1)&&0x1);
         gpio_set_value(dpram_gpio_pin_numbers[i], dpram_gpio_turn_on[i]);   // GPIO set value

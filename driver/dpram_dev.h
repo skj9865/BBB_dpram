@@ -4,7 +4,7 @@
 #include <linux/ioctl.h>
 
 #define DPRAM_ID_NUM (100)
-#define CONTROL_JOINT_NUM (20)
+#define CONTROL_JOINT_NUM (10)
 #define DPRAM_MAX_SIZE (0x1000)
 
 

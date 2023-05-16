@@ -1,1 +1,1 @@
-cmd_/home/skj/driver/dpram.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/skj/driver/dpram.ko /home/skj/driver/dpram.o /home/skj/driver/dpram.mod.o ;  true
+cmd_/home/skj/driver/dpram.ko := ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/skj/driver/dpram.ko /home/skj/driver/dpram.o /home/skj/driver/dpram.mod.o ;  true
