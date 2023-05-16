@@ -10,5 +10,8 @@ LDFLAGS := $(LM) $(shell $(XENO_CONFIG) --skin=$(SKIN) --ldflags)
 CC := $(shell $(XENO_CONFIG) --cc)
 
 $(TARGET): $(MAIN_SRC).c
-	$(CC) -o $@ $< $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $@.out $< $(CFLAGS) $(LDFLAGS)
 
+.PHONY : clean
+clean:
+	rm *.out

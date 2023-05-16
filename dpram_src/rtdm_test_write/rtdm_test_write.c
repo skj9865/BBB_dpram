@@ -42,12 +42,12 @@ void write_task()
     for(k = 0; k < send_count; ++k){
         // 매 iteration 마다, dpram에 write할 값을 증가 시킴
         for(i = 0; i < CONTROL_JOINT_NUM; ++i){
-            cdata.torque[i] = 1.0*i;//i*3 + 10.123123+k;
-            cdata.velocity[i] = 2.0*i;//i*3 + 11.4334+k;
-            cdata.position[i] = 3.0*i;//i*3 + 12.5343+k;
-            sdata.torque[i] = 4.0*i;//i*3 + 13.123123+k;
-            sdata.velocity[i] = 5.0*i;//i*3 + 14.4334+k;
-            sdata.position[i] = 6.0*i;//i*3 + 15.5343+k;
+            cdata.torque[i] = 10.0*i;//i*3 + 10.123123+k;
+            cdata.velocity[i] = 20.0*i;//i*3 + 11.4334+k;
+            cdata.position[i] = 30.0*i;//i*3 + 12.5343+k;
+            sdata.torque[i] = 40.0*i;//i*3 + 13.123123+k;
+            sdata.velocity[i] = 50.0*i;//i*3 + 14.4334+k;
+            sdata.position[i] = 60.0*i;//i*3 + 15.5343+k;
         }
 
         rt_dev_ioctl(device, DPRAM_SEND_CONTROL_DATA, &cdata);     // ioctl() 함수를 통하여, control_data를 씀

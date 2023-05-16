@@ -3,7 +3,7 @@
 #include <string.h>        // strlen()
 #include <fcntl.h>         // O_WRONLY
 #include <unistd.h>        // write(), close()
-#include <dpram_dev.h>
+#include "dpram_dev.h"
 #include <time.h>
 #include <sys/mman.h>
 #include <rtdm/rtdm.h>
