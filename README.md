@@ -31,10 +31,10 @@
 
 - Device tree 빌드 환경을 갖추기 위해 아래의 과정을 수행
     -linux 설치 시 기본으로 포함된 dtc 를 사용하면 되므로, 별도의 dtc 설치과정이 필요 없음 (아래과정은 무시)
-    ~~- root 권한 상태에서 진행~~
-    ~~- wget -c https://raw.github.com/RobertCNelson/tools/master/pkgs/dtc.sh ~~
-    ~~- chmod +x dtc.sh~~
-    ~~- ./dtc.sh~~
+    - ~~root 권한 상태에서 진행~~
+    - ~~wget -c ~~ https://raw.github.com/RobertCNelson/tools/master/pkgs/dtc.sh
+    - ~~chmod +x dtc.sh~~
+    - ~~./dtc.sh~~
 
 - github 에서 모든 폴더 (dpram_src, driver, dtc_build)를 BBB 로 다운로드(github) 또는 copy (scp 사용)
     - dtc_build 폴더로 이동하여 build.sh 수행
